@@ -1,24 +1,26 @@
 // ---- 텍스트 타이핑 효과 ----
-const text = document.querySelector('.type').textContent;
-const typeSpan = document.querySelector('.type');
-typeSpan.textContent = '';
+const typeElement = document.querySelector('.type');
+if(typeElement){
+  const text = typeElement.textContent;
+  typeElement.textContent = '';
 
-let index = 0;
-function type() {
-  if (index < text.length) {
-    typeSpan.textContent += text.charAt(index);
-    index++;
-    setTimeout(type, 50);
+  let index = 0;
+  function type() {
+    if (index < text.length) {
+      typeElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 50);
+    }
   }
+  type();
 }
-type();
 
 // ---- 카드 클릭 → 모달 열기 (Work + Web Design 통합) ----
-const allCards = document.querySelectorAll('.card-grid .card');
+const allCards = document.querySelectorAll('.card-grid .card, .cards'); // 기존 + 새 카드
 allCards.forEach(card => {
   card.addEventListener('click', () => {
     const modalId = card.dataset.design;
-    const modal = document.getElementById(modalId);
+    const modal = modalId ? document.getElementById(modalId) : null;
     if (modal) {
       modal.style.display = 'flex';
       const content = modal.querySelector('.design-content') || modal.querySelector('.video-content');
@@ -45,7 +47,8 @@ videoCards.forEach(card => {
 const closeBtns = document.querySelectorAll('.design-modal .close-btn, .video-modal .close-btn');
 closeBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    btn.closest('.design-modal, .video-modal').style.display = 'none';
+    const parentModal = btn.closest('.design-modal, .video-modal');
+    if(parentModal) parentModal.style.display = 'none';
   });
 });
 
@@ -59,8 +62,8 @@ const sections = [
 let currentIndex = 0;
 
 // 초기 표시
-sections.forEach(sec => sec.style.display = 'none');
-sections[currentIndex].style.display = 'block';
+sections.forEach(sec => { if(sec) sec.style.display = 'none'; });
+if(sections[currentIndex]) sections[currentIndex].style.display = 'block';
 
 // 각 섹션 좌우 버튼
 const nextBtns = [
@@ -93,53 +96,56 @@ prevBtns.forEach(btn => {
 
 // 현재 섹션 표시 함수
 function showCurrentSection() {
-  sections.forEach(sec => sec.style.display = 'none');
-  sections[currentIndex].style.display = 'block';
+  sections.forEach(sec => { if(sec) sec.style.display = 'none'; });
+  if(sections[currentIndex]) sections[currentIndex].style.display = 'block';
   window.scrollTo({ top: sections[currentIndex].offsetTop, behavior: 'smooth' });
 }
+
+// ---- CONTACT 타이핑 효과 ----
 document.addEventListener("DOMContentLoaded", () => {
   const terminalHeader = document.querySelector(".terminal-header");
-  const text = "> CONTACT";
-  let i = 0;
+  if(terminalHeader){
+    const text = "> CONTACT";
+    let i = 0;
+    terminalHeader.textContent = "";
 
-  terminalHeader.textContent = "";
-
-  function typing() {
-    if (i < text.length) {
-      terminalHeader.textContent += text.charAt(i);
-      i++;
-      setTimeout(typing, 100); // 속도 조절
+    function typing() {
+      if (i < text.length) {
+        terminalHeader.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+      }
     }
+    typing();
   }
-  typing();
 });
+
+// ---- 스크롤 버튼 ----
 const scrollBtn = document.getElementById("scrollTopBtn");
-
-// 스크롤 위치에 따라 버튼 보이기/숨기기
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) { // 200px 이상 스크롤 시
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-});
-
-// 버튼 클릭 시 맨 위로 스크롤
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-// 모든 섹션에 fade-in-section 클래스 추가
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section, header');
-
-  sections.forEach(sec => {
-    sec.classList.add('fade-in-section');
+if(scrollBtn){
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
   });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// ---- 페이드인 섹션 ----
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeSections = document.querySelectorAll('section, header');
+
+  fadeSections.forEach(sec => sec.classList.add('fade-in-section'));
 
   function handleScrollFadeIn() {
     const triggerBottom = window.innerHeight * 0.85;
 
-    sections.forEach(sec => {
+    fadeSections.forEach(sec => {
       const rect = sec.getBoundingClientRect();
       if (rect.top < triggerBottom) {
         sec.classList.add('visible');
@@ -148,5 +154,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', handleScrollFadeIn);
-  handleScrollFadeIn(); // 페이지 로드 시 이미 화면 안에 있는 섹션 처리
+  handleScrollFadeIn();
 });

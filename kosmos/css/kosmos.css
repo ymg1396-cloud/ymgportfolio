@@ -365,7 +365,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
+
 
 .pool h3,
 .pool p {
