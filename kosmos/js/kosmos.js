@@ -172,3 +172,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach(sec => observer.observe(sec));
 });
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
