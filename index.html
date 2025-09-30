@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+
+  <link rel="icon" href="img/icon.png" type="image/x-icon">
+  <!-- 구글폰트 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inconsolata:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Suit:opsz,wght@8..144,400;8..144,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <!-- 상단 네비게이션 -->
+    <nav class="hero-nav">
+      <ul class="nav-list">
+        <li><a href="#about">ABOUT ME</a></li>
+        <span class="nav-line"></span>
+        <li><a href="#work">DESIGN</a></li>
+        <span class="nav-line"></span>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+
+
+    <!-- 비디오 -->
+    <video id="heroVideo" autoplay muted loop playsinline poster="../img/2100212.PNG">
+      <source src="img/portfoliovideo.mp4" type="video/mp4">
+      <img src="../img/2100212.PNG" alt="portfolio hero" />
+    </video>
+
+    <!-- 어두운 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- HUD -->
+    <div class="hud">
+      <div class="hud-row">
+        <div class="hud-block" style="--i:1"></div>
+        <div class="hud-block" style="--i:2"></div>
+        <div class="hud-block" style="--i:3"></div>
+        <div class="hud-block" style="--i:4"></div>
+      </div>
+      <div class="hud-center">
+        <div class="hud-ring"></div>
+        <div class="hud-grid"></div>
+      </div>
+    </div>
+
+    <!-- 중앙 텍스트 -->
+    <div class="hero-content">
+      <h1 class="glitch">
+        <h1>YANG MIN GYEONG</h1>
+        <h1>PORTFOLIO</h1>
+      </h1>
+      <p class="subtitle">
+        <span class="type">배움을 즐기며 한 걸음씩 성장하고, 도전 속에서 경험을 쌓아가는 웹 디자이너 & 퍼블리셔, 양민경입니다.</span>
+        <span class="cursor">▮</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn">View Work</a>
+      </div>
+    </div>
+
+    <!-- 하단 메타 -->
+    <div class="meta">
+      <div class="meta-left">PORTFOLIO · 2025</div>
+      <div class="meta-right" id="metaCounter">001</div>
+    </div>
+  </header>
+
+  <!-- ABOUT ME SECTION -->
+  <section class="about" id="about">
+    <h2>ABOUT ME</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="img/Group 8.png" alt="Profile Illustration">
+        <h3>YANG MIN GYEONG</h3>
+      </div>
+      <div class="about-text">
+        <p>
+          안녕하세요!<br>
+          배우는 순간을 소중히 여기며, 조금씩 성장해 나아가는 웹 디자이너 & 퍼블리셔 양민경입니다.
+        </p>
+        <div class="about-info">
+          <div class="profile">
+            <h4>PROFILE</h4>
+            <p><strong class="label">Name</strong> <span class="value">양 민 경</span></p>
+            <p><strong class="label">Birth</strong> <span class="value">2003</span></p>
+
+          </div>
+          <div class="character">
+            <h4>CHARACTER</h4>
+            <p>책임감, 조직적, 현실적,<br>실용적, 결단력</p>
+          </div>
+          <div class="skills">
+            <h4>SKILLS</h4>
+            <ul>
+              <li><img src="img/Frame 197.png" alt="PS"></li>
+              <li><img src="img/Frame 198.png" alt="pr"></li>
+              <li><img src="img/Frame 199.png" alt="ai"></li>
+              <li><img src="img/Frame 200.png" alt="fm"></li>
+              <li><img src="img/Frame 201.png" alt="css"></li>
+              <li><img src="img/Frame 202.png" alt="html"></li>
+
+            </ul>
+
+          </div>
+          <div class="education">
+            <h4>EDUCATION</h4>
+            <p>
+              2025<br>
+              MBC 아카데미 학과캠퍼스<br>
+              <span class="highlight">생성형 AI를 활용한 웹퍼블리셔 & 프론트엔드 (React)<br>
+                양성과정 918시간 수료</span>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="workMeta" id="workMeta">
+      <div class="workMeta-left">PORTFOLIO · 2025</div>
+      <div class="workMeta-right">002</div>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <!-- Work Section -->
+  <section id="work" class="section-work">
+    <div class="container">
+      <h2>WEB PUBLISHING</h2>
+      <div class="card-grid">
+        <!-- 카드 1 -->
+        <div class="card" data-design="design1">
+          <div class="card-thumb">
+            <img src="img/Frame 105.png" alt="Project 1">
+          </div>
+          <div class="card-body">
+            <h3>제주담다 협업 프로젝트</h3>
+            <p>React + Three.js 기반 인터랙티브 웹</p>
+          </div>
+        </div>
+
+        <!-- 카드 2 -->
+        <div class="card" data-design="design2">
+          <div class="card-thumb">
+            <img src="img/Frame 151.png" alt="Project 2">
+          </div>
+          <div class="card-body">
+            <h3>유한건강생활</h3>
+            <p>메인페이지 UI/UX 디자인</p>
+          </div>
+        </div>
+
+        <!-- 카드 3 -->
+        <div class="card" data-design="design3">
+          <div class="card-thumb">
+            <img src="img/Frame 93.png" alt="Project 3">
+          </div>
+          <div class="card-body">
+            <h3>나인위시스</h3>
+            <p>메인페이지 UI/UX 디자인</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-btn-container">
+        <img src="img/arrow (5).png" id="prevBtn">
+        <img src="img/arrow (4).png" id="nextBtn">
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Modals -->
+  <section class="design-modal" id="design1">
+    <div class="design-content">
+      <button class="close-btn">&times;</button>
+      <div class="design-info">
+        <h3 class="title-jeju">제주담다 협업 프로젝트</h3>
+        <p><strong class="label-period">제작기간</strong> <span class="period-value">8.21 ~ 8.27</span></p>
+        <p><strong class="label-page">제작페이지</strong> <span class="page-value">서브페이지</span></p>
+        <p><strong class="label-tool">사용툴</strong> <span class="tool-value">FIGMA, HTML, CSS, JavaScript</span></p>
+        <p class="desc">제주도 관광 페이지를 팀원들과 협업하며 기획과 디자인, 프론트엔드 구현을 경험했습니다.</p>
+      </div>
+      <div class="design-preview">
+        <img src="img/제주담다.png" alt="Design Preview">
+      </div>
+    </div>
+    <div class="rating">★★★★★</div>
+    <div class="btn-area">
+      <a href="jeju/sub01.html" class="go-btn">VIEW</a>
+    </div>
+    <!-- 좌우 버튼 -->
+
+  </section>
+
+  <section class="design-modal" id="design2">
+    <div class="design-content">
+      <button class="close-btn">&times;</button>
+      <div class="design-info">
+        <h3 class="title-youhan">유한건강생활</h3>
+        <p><strong class="label-period">제작기간</strong> <span class="period-value">9.8 ~ 9.10</span></p>
+        <p><strong class="label-page">제작페이지</strong> <span class="page-value">메인페이지</span></p>
+        <p><strong class="label-tool">사용툴</strong> <span class="tool-value">FIGMA, HTML, CSS, JavaScript</span></p>
+        <p class="desc">유한건강생활 웹사이트를 직접 제작해보며 UI/UX 구성과 웹 구조를 경험해보기 위해 만들었습니다.</p>
+      </div>
+      <div class="design-preview">
+        <img src="img/유한건강생활.png" alt="Design Preview">
+      </div>
+    </div>
+    <div class="rating">★★★★☆</div>
+    <div class="btn-area">
+      <a href="/youhan/youhan.html" class="go-btn">VIEW</a>
+    </div>
+
+  </section>
+
+  <section class="design-modal" id="design3">
+    <div class="design-content">
+      <button class="close-btn">&times;</button>
+      <div class="design-info">
+        <h3 class="title-ninewish">나인위시스</h3>
+        <p><strong class="label-period">제작기간</strong> <span class="period-value">9.11 ~ 9.15</span></p>
+        <p><strong class="label-page">제작페이지</strong> <span class="page-value">메인페이지</span></p>
+        <p><strong class="label-tool">사용툴</strong> <span class="tool-value">FIGMA, HTML, CSS, JavaScript</span></p>
+        <p class="desc">나인위시스 웹사이트를 직접 제작해보며 실제 프로젝트 환경에서 웹 레이아웃과 인터랙션을 구현해보기 위해 만들었습니다.</p>
+      </div>
+      <div class="design-preview">
+        <img src="img/나인위시스.png" alt="Design Preview">
+      </div>
+    </div>
+    <div class="rating">★★★★☆</div>
+    <div class="btn-area">
+      <button type="button" class="go-btn">VIEW</button>
+
+    </div>
+    <!-- Web Design 섹션 -->
+
+
+  </section>
+  <div class="webMeta" id="webMeta">
+    <div class="webMeta-left">PORTFOLIO · 2025</div>
+    <div class="webMeta-right">003</div>
+  </div>
+  <!-- 비디오 부분 전체, 처음엔 숨김 -->
+  <div id="videoSection" style="display: none;">
+    <!-- Video Work Section -->
+    <section id="videoWork" class="section-video-work">
+      <div class="progressBarContainer">
+        <div class="progressBar"></div>
+      </div>
+      <div class="video-container">
+        <h2>VIDEO PROJECTS</h2>
+        <div class="video-card-grid">
+          <!-- 카드 1 -->
+          <div class="video-card" data-video="videoModal1">
+            <div class="video-card-thumb">
+              <img src="img/공포영화2.png" alt="Project 1">
+            </div>
+            <div class="card-body">
+              <h3>공포영화 예고편</h3>
+              <p>Premiere Pro</p>
+            </div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="video-card" data-video="videoModal2">
+            <div class="video-card-thumb">
+              <img src="img/개인정보보호캠페인.png" alt="Project 2">
+            </div>
+            <div class="card-body">
+              <h3>개인정보 보호 캠페인 프로젝트</h3>
+              <p>Premiere Pro</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-btn-container">
+          <img src="img/arrow (5).png" id="prevBtnVideo">
+          <img src="img/arrow (4).png" id="nextBtnVideo">
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Video Modals -->
+    <!-- Video Modals -->
+    <section class="video-modal" id="videoModal1">
+      <div class="video-content">
+        <button class="close-btn">&times;</button>
+        <div class="design-info">
+          <h3 class="title-horror">공포영화</h3>
+          <p><strong class="label-period">제작기간</strong> <span class="period-value">8.19</span></p>
+          <p><strong class="label-page">페이지</strong> <span class="page-value">영화 예고편</span></p>
+          <p><strong class="label-tool">사용툴</strong> <span class="tool-value">Premiere Pro</span></p>
+          <p class="desc">공포 영화 예고편 제작을 통해 영상 편집과 연출 경험을 쌓고, <br>긴장감 있는 스토리텔링을 시도해보고자 했습니다.</p>
+        </div>
+        <div class="video-preview">
+          <img src="img/영화.png" alt="Designn-Preview">
+        </div>
+        <div class="ratings">★★★★☆</div>
+        <div class="btn-area">
+          <a href="sub/공포영화.html" class="VIEW-btn">VIEW</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="video-modal" id="videoModal2">
+      <div class="video-content">
+        <button class="close-btn">&times;</button>
+        <div class="design-info">
+          <h3 class="title-privacy">STOP! 개인정보 유출</h3>
+          <p><strong class="label-period">제작기간</strong> <span class="period-value">9.18</span></p>
+          <p><strong class="label-page">페이지</strong> <span class="page-value">개인정보 보호 캠페인 영상</span></p>
+          <p><strong class="label-tool">사용툴</strong> <span class="tool-value">Premiere Pro</span></p>
+          <p class="desc">영상 제작을 통해 개인정보 보호의 필요성을 직접 체감하고, <br> 효과적인 전달 방법을 고민하며 배우는 경험이었습니다.</p>
+        </div>
+        <div class="video-preview">
+          <img src="img/캠페인.png" alt="Design-Preview">
+        </div>
+        <div class="ratings">★★★★☆</div>
+        <div class="btn-area">
+          <a href="sub/개인정보보호.html" class="VIEW-btn">VIEW</a>
+        </div>
+
+
+      </div>
+
+
+
+    </section>
+
+  </div>
+  <!-- Web Design Section (Work 구조 그대로) -->
+  <section id="webDesign" class="section-web-design">
+    <div class="slide-btn-container">
+      <img src="img/arrow (5).png" id="prevBtnWeb">
+      <img src="img/arrow (4).png" id="nextBtnWeb">
+    </div>
+    <div class="containere">
+      <h2>WEB DESIGN</h2>
+      <div class="card-grid">
+        <!-- 카드 1 -->
+        <div class="card" data-design="web-design1">
+          <div class="card-thumb">
+            <img src="img/더벤티.png" alt="Project 1">
+          </div>
+          <div class="card-body">
+            <h3>더벤티</h3>
+            <p>메인페이지 UI/UX 디자인 시안</p>
+          </div>
+        </div>
+
+        <!-- 카드 2 -->
+        <div class="card" data-design="web-design2">
+          <div class="card-thumb">
+            <img src="img/samyang.png" alt="Project 2">
+          </div>
+          <div class="card-body">
+            <h3>samyang food</h3>
+            <p>UI/UX 디자인 시안</p>
+          </div>
+        </div>
+
+        <!-- 카드 3 -->
+        <div class="card" data-design="web-design3">
+          <div class="card-thumb">
+            <img src="img/상세페이지1.png" alt="Project 3">
+          </div>
+          <div class="card-body">
+            <h3>Dr Dog</h3>
+            <p>서브페이지 UI/UX 디자인 시안</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 좌우 슬라이드 버튼 -->
+
+    </div>
+  </section>
+
+  <!-- Web Design Modals (Work 구조 그대로) -->
+  <section class="design-modal" id="web-design1">
+    <div class="design-content">
+      <button class="close-btn">&times;</button>
+      <div class="design-info">
+        <h3 class="title-theventi">더벤티</h3>
+        <p><strong class="label-period">제작기간</strong> <span class="period-value">9.12</span></p>
+        <p><strong class="label-page">페이지</strong> <span class="page-value">메인페이지</span></p>
+        <p><strong class="label-tool">사용툴</strong> <span class="tool-value">FIGMA</span></p>
+        <p class="desc">더벤티 메인페이지 UI/UX 디자인 시안을 제작하며 사용자 중심의 인터페이스와 시각적 흐름을 경험하기 위해 만들었습니다.</p>
+      </div>
+      <div class="design-preview">
+        <img src="img/더벤티그룹.png" alt="Design Preview">
+      </div>
+    </div>
+    <div class="rating">★★★★★</div>
+    <div class="btn-area">
+      <a href="sub/theventi.html" target="_blank" class="go-btn">VIEW</a>
+    </div>
+  </section>
+
+  <section class="design-modal" id="web-design2">
+    <div class="design-content">
+      <button class="close-btn">&times;</button>
+      <div class="design-info">
+        <h3 class="title-samyang">samyang food</h3>
+        <p><strong class="label-period">제작기간</strong> <span class="period-value">9.15</span></p>
+        <p><strong class="label-page">페이지</strong> <span class="page-value">메인페이지</span></p>
+        <p><strong class="label-tool">사용툴</strong> <span class="tool-value">FIGMA</span></p>
+        <p class="desc">삼양 food UI/UX 디자인 시안을 제작하며 브랜드 특성을 반영한 직관적 웹 경험을 구현하기 위해 만들었습니다.</p>
+      </div>
+      <div class="design-preview">
+        <img src="img/삼양그룹.png" alt="Design Preview">
+      </div>
+    </div>
+    <div class="rating">★★★★☆</div>
+    <div class="btn-area">
+      <a href="sub/samyang.html" target="_blank" class="go-btn">VIEW</a>
+    </div>
+
+  </section>
+
+  <section class="design-modal" id="web-design3">
+    <div class="design-content">
+      <button class="close-btn">&times;</button>
+      <div class="design-info">
+        <h3 class="title-alwjd">닥터독</h3>
+        <p><strong class="label-period">제작기간</strong> <span class="period-value">9.2</span></p>
+        <p><strong class="label-page">페이지</strong> <span class="page-value">상세페이지</span></p>
+        <p><strong class="label-tool">사용툴</strong> <span class="tool-value">Photoshop </span></p>
+        <p class="desc">영상 제작을 통해 개인정보 보호의 필요성을 직접 체감하고, <br> 효과적인 전달 방법을 고민하며 배우는 경험이었습니다.</p>
+      </div>
+      <div class="design-preview">
+        <img src="img/상세페이지.png" alt="Design Preview">
+      </div>
+    </div>
+    <div class="rating">★★★★☆</div>
+    <div class="btn-area">
+      <a href="sub/상세페이지.html" target="_blank" class="go-btn">VIEW</a>
+    </div>
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+
+  <section id="contact" class="contact-terminal">
+    <div class="terminal-window">
+      <div class="terminal-header">> CONTACT</div>
+      <form id="terminalForm" class="terminal-form">
+
+        <!-- NAME 박스 안으로 텍스트 이동 -->
+        <input type="text" name="name" value="KakaoTalk:12_0tr" readonly>
+
+        <!-- EMAIL 박스 안으로 텍스트 이동 -->
+        <input type="email" name="email" value="EMAIL:ymg180@naver.com" readonly>
+
+        <!-- MESSAGE 박스 안으로 텍스트 이동 -->
+        <textarea name="message" readonly>봐주셔서 감사합니다.</textarea>
+
+        <button type="submit">SEND</button>
+      </form>
+      <div id="terminalOutput" class="terminal-output"></div>
+    </div>
+    <div class="contactMeta" id="contactMeta">
+      <div class="contactMeta-left">PORTFOLIO · 2025</div>
+      <div class="contact-right">004</div>
+    </div>
+  </section>
+
+
+<!-- 스크롤 버튼 -->
+<button id="scrollTopBtn" class="scroll-top-btn">
+  <img src="img/button.png" alt="Scroll to top" />
+</button>
+
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

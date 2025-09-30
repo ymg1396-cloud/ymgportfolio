@@ -1,0 +1,26 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    background: #000;
+    color: #fff;
+    font-family: 'Space Grotesk', system-ui, Arial, sans-serif;
+}
+
+#heroVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+    will-change: transform, filter;
+    filter: none;
+    z-index: 0;
+}

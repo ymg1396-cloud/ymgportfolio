@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+/* 확인용, 복사xxxxxxxxxxxxx */
+.box {
+  height: 1000px;
+}
+
+:root {
+
+  /* COLOR ===================================== */
+  --white: #fff;
+  --white2: rgba(255, 255, 255, 0.7);
+  --black: #000000;
+  --gray: #444444;
+  --whitegray: #eee;
+  --mainColor: #27406E;
+  --point: #FFAA00;
+  --point2: #139600;
+
+  /* 간격 ===================================== */
+  --sectionPadding: 120px;
+  --contentmargin: 60px;
+
+  /* 폰트사이즈 =============================== */
+  --h1Size: 50px;
+  --h1Weight-6: 600;
+  --h2Size: 36px;
+  --h2Weight-6: 600;
+  --h3Size: 32px;
+  --h3Weight-6: 600;
+  --h4Size: 30px;
+  --h4Weight-5: 500;
+  --h5Size: 28px;
+  --h5Weight-5: 500;
+  --h6Size: 26px;
+  --h6Weight-5: 500;
+
+  --p1Size: 24px;
+  --p1Weight-4: 400;
+  --p2Size: 20px;
+  --p2Weight-4: 400;
+  --p3Size: 18px;
+  --p3Weight-3: 300;
+  --p4Size: 16px;
+  --p4Weight-3: 300;
+}
+
+/* 상단 스크롤 아이콘 부분입니다. =================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll_top {
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  z-index: 1000;
+}
+
+/* 외 공통 부분 ============================== */
+
+/* 이너박스 */
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+/* 버튼 (참고만 하셔도 되고 사용하셔도 됩니다.) */
+
+button {
+  position: relative;
+  padding: 13px 48px; /* 크기 조정 시 이 값만 조정하시면 돼요 */
+  border: 1px solid var(--black);
+  color: var(--black);
+  border-radius: 100px;
+  font-size: var(--p4Size-16);
+  opacity: 1;
+  transition: all 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 3;
+}
+
+button:hover {
+  border-color: var(--black);
+}
+
+button::before {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+button:hover::before {
+  opacity: 1;
+  top: 0;
+}
+
+button:hover span {
+  position: relative;
+  z-index: 3;
+  color: var(--white);
+  font-weight: var(--p4Weight-3);
+}
+
+
+/* 헤더부분입니다. ================================== */
+
+header {
+  width: 100%; height: 70px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+}
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .inner h1 {
+  padding-top: 20px;
+  width: 130px;
+  background: url(../source/img_header_logo_black.png)no-repeat center/contain;
+}
+
+header .inner h1 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+header .inner .nav {
+  display: flex;
+  color: var(--black);
+  font-size: var(--p2Size);
+  font-weight: var(--p2Weight-4);
+}
+
+header .inner .nav li {
+  position: relative;
+  line-height: 70px;
+  margin-left: 60px;
+  transition: all 0.2s;
+}
+
+header .inner .nav li::after {
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background: var(--point);
+  content: '';
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+header .inner .nav li:hover {
+  color: var(--point);
+}
+
+header .inner .nav li:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+
+
+/* 푸터입니다 ================================ */
+footer {
+  background: var(--black);
+  height: 283px;
+  width: 100%;
+  color: #fff;
+  padding: 60px 0;
+}
+
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .inner .footer_left>p {
+  font-size: var(--p4Size);
+  font-weight: 200;
+}
+
+footer .inner .footer_left .notice {
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+
+footer .inner .footer_right {
+  width: 30%;
+}
+
+footer .inner .footer_right p {
+  font-size: var(--p4Size);
+  font-weight: 200;
+}
+
+footer .inner .footer_right .tell {
+  font-size: var(--h4Size);
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+footer .inner .footer_right span {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  font-weight: 200;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+footer .inner .footer_right .icon_box {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+

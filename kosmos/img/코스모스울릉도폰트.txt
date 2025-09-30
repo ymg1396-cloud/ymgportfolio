@@ -1,0 +1,143 @@
+/* garamond */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+
+/* GowunBatang */
+@font-face {
+  font-family: "Gowun Batang";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("GowunBatang-Regular"),
+    url("/resources/fonts/GowunBatang/GowunBatang-Regular.ttf")
+      format("truetype"),
+    url("/resources/fonts/GowunBatang/GowunBatang-Regular.woff") format("woff"),
+    url("/resources/fonts/GowunBatang/GowunBatang-Regular.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Gowun Batang";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("GowunBatang-Bold"),
+    url("/resources/fonts/GowunBatang/GowunBatang-Bold.ttf") format("truetype"),
+    url("/resources/fonts/GowunBatang/GowunBatang-Bold.woff") format("woff"),
+    url("/resources/fonts/GowunBatang/GowunBatang-Bold.woff2") format("woff2");
+}
+
+/* SackersGothicStd */
+@font-face {
+  font-family: "Sackers Gothic Std";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("SackersGothicStd-Light"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Light.otf")
+      format("opentype"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Light.woff")
+      format("woff"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Light.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Sackers Gothic Std";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("SackersGothicStd-Medium"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Medium.otf")
+      format("opentype"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Medium.woff")
+      format("woff"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Medium.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Sackers Gothic Std";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local("SackersGothicStd-Heavy"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Heavy.otf")
+      format("opentype"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Heavy.woff")
+      format("woff"),
+    url("/resources/fonts/SackersGothicStd/SackersGothicStd-Heavy.woff2")
+      format("woff2");
+}
+
+/* Garamond Premier */
+@font-face {
+  font-family: "Garamond Premier";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local("GaramondPremier-Regular"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro.ttf")
+      format("truetype"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro.woff") format("woff"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Garamond Premier";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("GaramondPremier-Medium"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-Med.ttf")
+      format("truetype"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-Med.woff")
+      format("woff"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-Med.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Garamond Premier";
+  font-style: italic;
+  font-weight: 500;
+  src:
+    local("GaramondPremier-Medium-Italic"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-MedIt.ttf")
+      format("truetype"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-MedIt.woff")
+      format("woff"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-MedIt.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Garamond Premier";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("GaramondPremier-Bold"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-Bd.ttf")
+      format("truetype"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-Bd.woff")
+      format("woff"),
+    url("/resources/fonts/GaramondPremier/GaramondPremrPro-Bd.woff2")
+      format("woff2");
+}
+
+/* ST Heiti */
+@font-face {
+  font-family: "ST Heiti";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local("STHeiti-Light"),
+    url("/resources/fonts/STHeiti/STHeiti-Light.ttf") format("truetype"),
+    url("/resources/fonts/STHeiti/STHeiti-Light.woff") format("woff"),
+    url("/resources/fonts/STHeiti/STHeiti-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ST Heiti";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("STHeiti-Medium"),
+    url("/resources/fonts/STHeiti/STHeiti-Medium.ttf") format("truetype"),
+    url("/resources/fonts/STHeiti/STHeiti-Medium.woff") format("woff"),
+    url("/resources/fonts/STHeiti/STHeiti-Medium.woff2") format("woff2");
+}

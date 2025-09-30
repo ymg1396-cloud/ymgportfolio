@@ -1,0 +1,793 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #000;
+}
+
+/* Header */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.main-header.transparent {
+  background-color: transparent;
+}
+
+.main-header.scrolled {
+  background-color: black;
+}
+
+.menu-btn img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* hover로 내려오는 메뉴 제거 */
+.menu:hover .submenu {
+  display: none !important;
+}
+
+.book-now a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 25px;
+  border: 1px solid white;
+
+  transition: 0.3s;
+}
+
+
+.book-now a:hover {
+  background-color: rgba(255, 255, 255, 0.315);
+  color: rgb(255, 255, 255);
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.main-header.transparent {
+  background-color: transparent;
+}
+
+.main-header.scrolled {
+  background-color: black;
+}
+
+/* 메뉴 버튼 */
+.menu-btn img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* 로고 */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+
+/* 메뉴 (초기 숨김, 오른쪽에서 슬라이드) */
+.nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  /* 왼쪽 화면 밖 */
+  width: 300px;
+  height: 100%;
+  background-color: black;
+  padding: 50px 20px;
+  transition: left 0.4s ease;
+  z-index: 2000;
+}
+
+.menu a {
+  text-transform: uppercase;
+  /* 모든 글자를 대문자로 변환 */
+  margin-bottom: 100px;
+  top: 70px;
+  position: relative;
+}
+
+.nav.menu-open {
+  left: 0;
+  /* 화면 안으로 */
+}
+
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-bottom: 20px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* 사이드 메뉴 */
+.side-menu {
+  position: fixed;
+  /* 화면 전체 기준으로 고정 */
+  top: 0;
+  left: -300px;
+  /* 기본 숨김 위치 */
+  width: 300px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 3000;
+  /* header 위 */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  left: 0;
+  /* 메뉴 열릴 때 */
+}
+
+.side-menu .close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  align-self: flex-end;
+  z-index: 3100;
+  /* 확실히 버튼 위 */
+}
+
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.side-menu ul li {
+  margin-bottom: 20px;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  /* 자동 대문자 */
+}
+
+
+
+/* 메뉴 버튼 */
+.menu-btn img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* 헤더 스타일 */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.main-header.transparent {
+  background-color: transparent;
+}
+
+.main-header.scrolled {
+  background-color: black;
+}
+
+
+
+
+/* 모바일에서 기존 nav 숨김 */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu-logo {
+  top: 30px;
+  position: relative;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-text h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 14px;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 10%;
+  gap: 2rem;
+  margin-bottom: 100px;
+}
+
+.intro .text {
+  flex: 1;
+  position: relative;
+  top: -100px;
+  margin-bottom: 180px;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+
+}
+
+.intro p {
+  top: 50px;
+  position: relative;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 18px;
+  gap: 20px;
+}
+
+.intro .images {
+  flex: 1;
+  position: relative;
+  margin-bottom: 500px;
+  right: 200px;
+}
+
+.intro .images img {
+  width: 100%;
+  display: block;
+  left: 250px;
+  position: relative;
+
+}
+
+.intro .images .overlap {
+
+  position: absolute;
+  margin-top: -150px;
+  left: 50px;
+  width: 70%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.images_logo .main_logo {
+  position: relative;
+}
+
+/* Kosmos Section */
+.kosmos {
+  padding: 6rem 8%;
+}
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card p {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+
+.pool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pool h3,
+.pool p {
+  left: 160px;
+  position: relative;
+
+  top: 80px;
+
+}
+
+.pool h3 {
+  font-size: 36px;
+  font-weight: 300;
+
+
+
+}
+
+.pool p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 30px;
+
+}
+
+.sni img {
+  width: 90%;
+  height: auto;
+  right: 550px;
+  position: relative;
+  top: -70px;
+}
+
+.image-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  left: 300px;
+  position: relative;
+  top: -180px;
+}
+
+.image-thumbnails img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-thumbnails img:hover {
+  transform: scale(1.1);
+}
+
+.pool .text {
+  position: relative;
+  /* 부모 기준으로 자식 위치 잡기 */
+  width: 600px;
+  /* 원하는 고정 너비 */
+  min-height: 250px;
+  /* 영역 높이 최소값 */
+  margin: 0 auto;
+  /* 가운데 정렬 */
+  top: -600px;
+  right: 7px;
+
+
+}
+
+
+
+.text-item {
+  display: none;
+  /* 기본 숨김 */
+  position: absolute;
+  /* 부모 .text 안에서 겹치게 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  /* 글자 왼쪽 정렬 */
+}
+
+.text-item.active {
+  display: block;
+  /* 활성화된 텍스트만 표시 */
+}
+
+.text-item p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 16px;
+  word-break: keep-all;
+  /* 한국어 단어 단위 줄바꿈 */
+
+}
+
+
+.text-item h3 {
+  font-size: 24px;
+  right: -100px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+.text-item.active {
+  display: block;
+}
+
+.energy-swiper {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 200px;
+}
+
+
+
+.energy-swiper .swiper-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+
+/* 섹션이 커졌을 때 (active slide) → 텍스트 원래 크기 */
+.energy-swiper .swiper-slide-active .text {
+  transform: translateX(-50%) scale(1);
+}
+
+.energy-swiper .swiper-slide {
+  flex: 1;
+  position: relative;
+  /* 절대 위치 기준 */
+  overflow: visible;
+  /* 자식 텍스트 잘림 방지 */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: flex 0.5s ease, transform 0.5s ease;
+  z-index: 1;
+}
+
+.intro {
+  position: relative;
+  /* 인트로가 기준이 되도록 설정 */
+}
+
+.images_logo {
+  position: absolute;
+  /* 이제 인트로 기준 */
+  top: 1200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.energy-swiper .swiper-slide .image-container {
+  width: 100%;
+  height: 120%;
+  /* 기존 100% → 세로 키움 */
+  overflow: hidden;
+  filter: brightness(0.6);
+  /* 0~1, 1이 원본 밝기, 0.6은 살짝 어둡게 */
+  margin-bottom: 50px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.energy-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.energy-swiper .swiper-slide {
+  flex: 1;
+  position: relative;
+  transition: flex 0.6s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.energy-swiper .swiper-slide .text {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  color: #fff;
+  text-align: center;
+  transition: all 0.4s ease;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  top: 370px;
+}
+
+/* 마우스 올린 슬라이드 */
+.energy-swiper .swiper-slide:hover {
+  flex: 3;
+  z-index: 2;
+}
+
+.energy-swiper .swiper-slide:hover .text {
+  font-size: 18px;
+  /* 커진 섹션은 텍스트도 커짐 */
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+/* 마우스 안 올린(줄어든) 슬라이드 */
+.energy-swiper .swiper-slide:not(:hover) {
+  flex: 1;
+}
+
+.energy-swiper .swiper-slide:not(:hover) .text {
+  font-size: 0.8rem;
+  /* 작아진 섹션 텍스트 줄임 */
+  line-height: 1.2;
+
+  text-overflow: ellipsis;
+  /* 혹시 모를 넘침 방지 */
+}
+
+.card-logo img {
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  top: 250px;
+  position: relative;
+}
+
+
+.energy-swiper .p-text {
+  position: absolute;
+  top: 300px;
+  /* 원하는 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  /* 고정 크기 */
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  /* 줄바꿈 없이 한 줄 유지 */
+  z-index: 3;
+  pointer-events: none;
+}
+
+.energy-swiper .swiper-slide .card-logo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+
+/* ===== Footer ===== */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 80px 40px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: -150px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 왼쪽 영역 */
+.footer-left {
+  flex: 1;
+  min-width: 280px;
+  margin-right: 40px;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.footer-phone {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.footer-email {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-company {
+  color: #aaa;
+  font-size: 13px;
+ margin-bottom: 150px;
+ top: 100px;
+  position: relative;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* 오른쪽 메뉴 */
+.footer-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  min-width: 500px;
+}
+
+.footer-menu li,
+.footer-submenu li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.footer-menu strong,
+.footer-submenu strong {
+  font-size: 13px;
+  font-weight: bold;
+  color: #bbb;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-menu a,
+.footer-submenu a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-menu a:hover,
+.footer-submenu a:hover {
+  opacity: 0.6;
+}
+
+.footer-submenu {
+  color: #777;
+  font-weight: 400;
+}
+
+/* 하단 링크 */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-bottom a {
+  margin: 0 10px;
+  color: #999;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+/* 스크롤 애니메이션 기본 상태 */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+/* 화면에 나타났을 때 */
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 반응형 (모바일 대응) */
+@media (max-width: 992px) {
+
+  .intro,
+  .pool {
+    flex-direction: column;
+    padding: 4rem 5%;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    /* 기본 메뉴 감추기 */
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}

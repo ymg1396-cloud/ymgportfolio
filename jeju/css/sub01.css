@@ -1,0 +1,663 @@
+@charset "utf-8";
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll_top {
+    position: fixed;
+    right: 100px;
+    bottom: 50px;
+    z-index: 1000;
+}
+
+/* 외 공통 부분 ============================== */
+
+/* 이너박스 */
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* 버튼 (참고만 하셔도 되고 사용하셔도 됩니다.) */
+
+button {
+    position: relative;
+    padding: 13px 48px;
+    /* 크기 조정 시 이 값만 조정하시면 돼요 */
+    border: 1px solid var(--black);
+    color: var(--black);
+    border-radius: 1000px;
+    font-size: 16px;
+    opacity: 1;
+    transition: all 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 3;
+}
+
+button:hover {
+    border-color: var(--black);
+}
+
+button::before {
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+button:hover::before {
+    opacity: 1;
+    top: 0;
+}
+
+button:hover span {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    font-weight: 600;
+}
+
+
+/* 헤더부분입니다. ================================== */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner h1 {
+    padding-top: 20px;
+    width: 175px;
+    height: 54px;
+    background: url(../source/img_header_logo_black.png)no-repeat center;
+}
+
+header .inner h1 a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+header .inner .nav {
+    display: flex;
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+header .inner .nav li {
+    line-height: 100px;
+    position: relative;
+    margin-left: 100px;
+    transition: all 0.2s;
+}
+
+header .inner .nav li::after {
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background: var(--point);
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+header .inner .nav li:hover {
+    color: var(--point);
+}
+
+header .inner .nav li:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+header .nav li.on {
+    color: var(--point);
+}
+
+header .inner .nav li.on::after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: var(--point);
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: 0.2s;
+}
+
+/* 메인 비주얼 =============================== */
+
+.sub_bg {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.sub_nav {
+    padding: 120px 0;
+    color: #ccc;
+}
+
+.sub_bg video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.sub_bg .video_dim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* 원하는 강도로 */
+    z-index: 1;
+}
+
+.sub_bg .sub_bg_text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+}
+
+
+.sub_bg .sub_bg_text h2 {
+    font-size: var(--h1Size);
+    font-weight: var(--h1Weight-6);
+    margin-bottom: 20px;
+    opacity: 0;
+
+}
+
+
+.sub_bg .sub_bg_text p {
+    font-size: var(--p1Size);
+    font-weight: var(--p1Weight-4);
+    opacity: 0;
+}
+
+/* 서브 네비게이션 */
+
+.sub_nav {
+    padding: 120px 0;
+    color: #ccc;
+}
+
+
+
+.sub_nav img {
+    margin-right: 6px;
+}
+
+.sub_nav .inner .home {
+    position: relative;
+    margin-right: 18px;
+}
+
+.sub_nav .inner .home:after {
+    position: absolute;
+    top: 0;
+    right: -11px;
+    content: url(../source/ico_nav_next.png);
+}
+
+.sub_nav .inner span+span {
+    color: #666;
+    font-weight: 500;
+
+}
+
+
+
+.sub_bg .sub_bg_text h2 {
+    font-size: var(--h1Size);
+    font-weight: var(--h1Weight-6);
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.sub_bg .sub_bg_text p {
+    font-size: var(--p1Size);
+    font-weight: var(--p1Weight-4);
+    opacity: 0;
+}
+
+/* INTRO */
+.section-intro h3 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    /* 이미지와 h3 사이 공간 확보 */
+    /* 기존 30px → 20px로 줄임 */
+
+    /* 위로 살짝 올림 */
+    font-size: 36px;
+
+
+}
+
+.section-intro h2 {
+    font-size: var(--h3Size);
+    font-weight: var(--h3Weight-6);
+    text-align: center;
+    margin-bottom: var(--contentmargin);
+    position: relative;
+    top: -60px;
+}
+
+.section-intro h3 {
+    font-size: var(--p1Size);
+    font-weight: var(--p1Weight-4);
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.section-intro p {
+    font-size: var(--p3Size);
+    font-weight: var(--p3Weight-3);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.section-intro img {
+    width: 1050px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto 30px;
+    position: relative;
+    top: -5px;
+    margin-bottom: 60px;
+}
+
+.tag-title {
+    text-align: center;
+    /* 제목 가운데 정렬 */
+    margin-bottom: 40px;
+    /* 제목과 카드 섹션 사이 간격 */
+}
+
+.tag-title h2 {
+    font-size: var(--h4Size);
+    font-weight: var(--h4Weight-5);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tag-section {
+    margin-top: 60px;
+    /* 섹션 전체를 위에서 아래로 살짝 내림 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* 카드들을 가운데 정렬 */
+}
+
+/* INFO CARDS */
+/* 카드 섹션 전체 스타일 */
+.card-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 60px 0 120px;
+}
+
+/* 카드 기본 스타일 */
+.card-item {
+    width: 220px;
+    max-height: 350px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: var(--white);
+    box-sizing: border-box;
+    overflow: hidden;
+
+    /* 부드럽게 애니메이션 */
+    transition: all 0.3s ease;
+}
+
+.card-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 12px;
+
+    /* 이미지 확대 부드럽게 */
+    transition: transform 0.3s ease;
+}
+
+.card-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 6px 0;
+}
+
+.card-item p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.35;
+    margin: 6px 0;
+    min-height: 38px;
+}
+
+/* hover 시 효과 */
+.card-item.hovered {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: #FFAA00;
+    z-index: 3;
+}
+
+.card-item.hovered img {
+    transform: scale(1.1);
+}
+
+/* TAG SECTION */
+.tag-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 10px;
+    max-width: 1060px;
+    margin: 0 auto;
+    margin-bottom: var(--sectionPadding);
+}
+
+.tag-item {
+    display: flex;
+    height: 42px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: var(--p4Size);
+    font-weight: var(--p4Weight-3);
+    transition: all 0.3s ease;
+}
+
+.tag-item.hovered {
+    transform: translateY(-5px) scale(1.02);
+    /* 살짝 위로 + 확대 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* 그림자 */
+    border-color: #FFAA00;
+    /* 테두리 강조 */
+}
+
+.tag-item.hovered .tag-label {
+    background-color: #FFAA00;
+    /* 라벨 색상 변경 */
+    color: #fff;
+    /* 글씨 흰색으로 */
+    transition: all 0.3s ease;
+}
+
+
+.tag-label {
+    width: 92px;
+    background: #002b5c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.tag-label .orange {
+    color: #f57c00;
+}
+
+.tag-content {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* PROMO BANNER */
+.promo-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    background-image: url("../source/sub01/dugod.jpg");
+    background-size: cover;
+    /* 화면에 꽉 차게 */
+    background-position: center;
+    /* 가운데 정렬 */
+    background-attachment: fixed;
+    /* ★ 고정 배경 효과 */
+}
+.promo-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 검정 40% 투명 */
+  z-index: 1;
+}
+.promo-banner p {
+    font-weight: var(--p1Weight-4);
+    font-size: var(--p1Size);
+    text-shadow: 0 0 10px var(--black);
+    line-height: 1.4;
+    z-index: 5;
+}
+
+
+/* SEASON GALLERY */
+.season-gallery {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    gap: 20px;
+    margin-bottom: 120px;
+    justify-content: center;
+}
+
+.season-card {
+    width: 500px;
+    height: 350px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.season-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+}
+
+.season-card:hover img {
+    transform: scale(1.05);
+}
+
+.hover-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.hover-overlay .season-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(10px);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.hover-overlay .season-caption h3 {
+    font-size: var(--p1Size);
+    font-weight: var(--p1Weight-4);
+    margin-bottom: 8px;
+}
+
+.hover-overlay .season-caption p {
+    font-size: var(--p3Size);
+    font-weight: var(--p3Weight-3);
+}
+
+.hover-overlay:hover::before {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hover-overlay:hover .season-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+/* TEXT SECTION */
+.text-section {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.text-section h2 {
+    font-size: var(--h4Size);
+    font-weight: var(--h4Weight-5);
+    margin-bottom: 30px;
+}
+.text-section p {
+    font-size: var(--p3Size);
+    font-weight: var(--p3Weight-3);
+    line-height: 1.6;
+}
+
+
+/* 푸터입니다 ================================ */
+footer {
+    background: var(--black);
+    height: 283px;
+    width: 100%;
+    color: #fff;
+    padding: 60px 0;
+}
+
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .inner .footer_left>p {
+    font-size: var(--p4Size);
+    font-weight: 200;
+}
+
+footer .inner .footer_left .notice {
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+
+footer .inner .footer_right {
+    width: 30%;
+}
+
+footer .inner .footer_right p {
+    font-size: var(--p4Size);
+    font-weight: 200;
+}
+
+footer .inner .footer_right .tell {
+    font-size: var(--h4Size);
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+footer .inner .footer_right span {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+footer .inner .footer_right .icon_box {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer .icon_box {
+    margin-top: 20px;
+}
+
+.footer_right .icon_box {
+    position: relative;
+    top: 1px;
+    /* 아주 살짝 내리기 */
+}

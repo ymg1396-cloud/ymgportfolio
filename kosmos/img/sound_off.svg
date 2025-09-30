@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_474364" data-name="사각형 474364" width="32" height="32" transform="translate(49 1000)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="sound_off" transform="translate(-49 -1000)" clip-path="url(#clip-path)">
+    <g id="그룹_636074" data-name="그룹 636074" transform="translate(49.004 1001.623)">
+      <g id="그룹_636073" data-name="그룹 636073">
+        <g id="합치기_143" data-name="합치기 143" transform="translate(-0.004 0.377)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8.318,20.125H0V7.875H8.311L19,0V28Z" stroke="none"/>
+          <path d="M 17.5 25.03055000305176 L 17.5 2.968163013458252 L 9.200240135192871 9.082659721374512 C 8.942480087280273 9.272560119628906 8.630709648132324 9.375 8.310549736022949 9.375 L 1.5 9.375 L 1.5 18.625 L 8.318360328674316 18.625 C 8.638699531555176 18.625 8.950630187988281 18.72756004333496 9.208470344543457 18.91765022277832 L 17.5 25.03055000305176 M 19 28 L 8.318360328674316 20.125 L 0 20.125 L 0 7.875 L 8.310549736022949 7.875 L 19 -1.77635683940025e-15 L 19 28 Z" stroke="none" fill="#fff"/>
+        </g>
+        <g id="그룹_636072" data-name="그룹 636072" transform="translate(23.334 10.377)">
+          <path id="패스_1531861" data-name="패스 1531861" d="M-14382.5-23290.637l8.145,8.145" transform="translate(14382.496 23290.637)" fill="none" stroke="#fff" stroke-width="1.5"/>
+          <path id="패스_1531862" data-name="패스 1531862" d="M-14374.351-23290.637l-8.145,8.145" transform="translate(14382.495 23290.637)" fill="none" stroke="#fff" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
