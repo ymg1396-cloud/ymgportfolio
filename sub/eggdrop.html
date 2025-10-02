@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGGDROP</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    height: 100%;
+  }
+
+  /* 상세페이지 이미지 */
+  .detail-page {
+    display: block;
+    width: 100%;       /* 브라우저 가로에 맞춤 */
+    max-width: 800px;  /* 원래 상세페이지 가로 기준 */
+    height: auto;      /* 세로는 비율 유지 */
+    margin: 0 auto;    /* 가운데 정렬 */
+  }
+
+  /* 모바일에서도 가로 꽉 차게 */
+  @media (max-width: 800px) {
+    .detail-page {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <img src="img/에그드랍서브페이지.png" alt="에그드랍 서브페이지" class="detail-page">
+</body>
+</html>

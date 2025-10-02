@@ -217,9 +217,23 @@ h1 {
   display: inline-block;
   letter-spacing: 2px;
   opacity: .95;
-  font-family: 'Pretendard', system-ui, Arial, sans-serif;
   justify-content: center;
   align-items: center;
+  font-family: 'namu', sans-serif;
+  font-size: 30px;
+}
+
+
+
+ @font-face {
+  font-family: 'namu';
+  src: url('../fonts/나눔손글씨\ 규리의\ 일기.ttf') format('truetype');
+  font-weight:700;
+  font-style: normal;
+}
+
+.handwriting {
+  font-family: 'BM Jua', sans-serif;
 }
 
 .cursor {
@@ -1297,6 +1311,24 @@ h3 {
   margin-bottom: 80px;
   color: #A3D2FA;
 }
+.title-THEKOSMOS {
+  font-size: 36px;
+  margin-bottom: 80px;
+  color: #55f0c9;
+}
+
+.title-airport {
+  font-size: 36px;
+  margin-bottom: 80px;
+  color: #fcfa95;
+}
+
+.title-eggdrop {
+  font-size: 36px;
+  margin-bottom: 80px;
+  color: #A6D608;
+}
+
 
 .title-youhan .title-ninewish .design-info p {
   margin-bottom: 8px;
