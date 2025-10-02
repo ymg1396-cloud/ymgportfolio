@@ -1199,7 +1199,7 @@ h2 {
 
 
 .education .highlight {
-  color: #ffd24a;
+  color:rgb(255, 255, 51);
   /* 강조 색상 */
   line-height: 1.5;
   /* span 안도 줄 맞춤 */
@@ -1329,7 +1329,7 @@ h3 {
 .title-eggdrop {
   font-size: 36px;
   margin-bottom: 80px;
-  color: #A6D608;
+  color: #81C784;
 }
 
 
