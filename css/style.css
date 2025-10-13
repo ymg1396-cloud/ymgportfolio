@@ -1,0 +1,1305 @@
+/* ===================== Reset ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  color: #333;
+}
+
+/* ===================== 헤더 ===================== */
+/* ===================== HEADER ===================== */
+header {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 84px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+header:hover {
+  height: 250px;
+  background-color: rgba(32, 32, 32, 0.74);
+}
+
+header.scrolled {
+  background-color: #111111e1;
+  /* 올릴 때 검정 */
+}
+
+header .logo img {
+  height: 29.5px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 140px;
+}
+
+header nav {
+  flex: 1;
+}
+
+header .main-menu {
+  margin-left: -170px;
+  margin-top: 20px;
+  position: relative;
+  font-size: 18px;
+}
+
+header ul.main-menu {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  list-style: none;
+  color: #fff;
+  font-size: 21px;
+  position: relative;
+  top: 0;
+}
+
+header .logo img,
+header ul.main-menu,
+.submenu-container ul {
+  position: relative;
+  top: 0;
+}
+
+header:hover .logo img {
+  top: -65px;
+}
+
+header:hover ul.main-menu {
+  top: -65px;
+}
+
+header:hover .submenu-container ul {
+  top: -20px;
+}
+
+
+/* ===================== main-menu li 아래 초록 라인 ===================== */
+.menu-item {
+  position: relative;
+  /* hover-line 기준 */
+
+
+}
+
+/* ===================== 회사소개 라인 ===================== */
+#line-company {
+  position: absolute;
+
+  bottom: 0;
+  /* 메뉴 텍스트 바로 아래 */
+  left: -35px;
+  top: 40px;
+  /* 원하는 시작 위치 */
+  width: 160px;
+  /* 라인 길이 */
+  height: 2px;
+  background-color: #008E43;
+  opacity: 0;
+  /* 기본에는 안 보이도록 */
+  transition: opacity 0.3s, width 0.3s, left 0.3s;
+
+}
+
+.menu-item:hover #line-company {
+  opacity: 1;
+  /* 마우스 올리면 보임 */
+}
+
+
+/* ===================== 사업소개 라인 ===================== */
+#line-business {
+  position: absolute;
+
+  bottom: 0;
+  /* 메뉴 텍스트 바로 아래 */
+  left: -38px;
+  top: 40px;
+  /* 원하는 시작 위치 */
+  width: 160px;
+  /* 라인 길이 */
+  height: 2px;
+  background-color: #008E43;
+  opacity: 0;
+  /* 기본에는 안 보이도록 */
+  transition: opacity 0.3s, width 0.3s, left 0.3s;
+}
+
+.menu-item:hover #line-business {
+  opacity: 1;
+  /* 마우스 올리면 보임 */
+}
+
+/* ===================== 기업문화 라인 ===================== */
+
+#line-culture {
+  position: absolute;
+
+  bottom: 0;
+  /* 메뉴 텍스트 바로 아래 */
+  left: -40px;
+  top: 40px;
+  /* 원하는 시작 위치 */
+  width: 160px;
+  /* 라인 길이 */
+  height: 2px;
+  background-color: #008E43;
+  opacity: 0;
+  /* 기본에는 안 보이도록 */
+  transition: opacity 0.3s, width 0.3s, left 0.3s;
+}
+
+.menu-item:hover #line-culture {
+  opacity: 1;
+  /* 마우스 올리면 보임 */
+}
+
+/* ===================== 지속가능성 라인 ===================== */
+#line-sustain {
+  position: absolute;
+
+  bottom: 0;
+  /* 메뉴 텍스트 바로 아래 */
+  left: -42px;
+  top: 40px;
+  /* 원하는 시작 위치 */
+  width: 160px;
+  /* 라인 길이 */
+  height: 2px;
+  background-color: #008E43;
+  opacity: 0;
+  /* 기본에는 안 보이도록 */
+  transition: opacity 0.3s, width 0.3s, left 0.3s;
+}
+
+.menu-item:hover #line-sustain {
+  opacity: 1;
+  /* 마우스 올리면 보임 */
+}
+
+/* ===================== 미디어 라인 ===================== */
+#line-media {
+  position: absolute;
+
+  bottom: 0;
+  /* 메뉴 텍스트 바로 아래 */
+  left: -45px;
+  top: 40px;
+  /* 원하는 시작 위치 */
+  width: 160px;
+  /* 라인 길이 */
+  height: 2px;
+  background-color: #008E43;
+  opacity: 0;
+  /* 기본에는 안 보이도록 */
+  transition: opacity 0.3s, width 0.3s, left 0.3s;
+}
+
+.menu-item:hover #line-media {
+  opacity: 1;
+  /* 마우스 올리면 보임 */
+}
+
+/* ===================== 고객지원 라인 ===================== */
+#line-support {
+  position: absolute;
+
+  bottom: 0;
+  /* 메뉴 텍스트 바로 아래 */
+  left: -28px;
+  top: 40px;
+  /* 원하는 시작 위치 */
+  width: 160px;
+  /* 라인 길이 */
+  height: 2px;
+  background-color: #008E43;
+  opacity: 0;
+  /* 기본에는 안 보이도록 */
+  transition: opacity 0.3s, width 0.3s, left 0.3s;
+}
+
+.menu-item:hover #line-support {
+  opacity: 1;
+  /* 마우스 올리면 보임 */
+}
+
+
+.kor-menu {
+  position: relative;
+  /* 드롭다운 위치 기준 */
+  cursor: pointer;
+  left: 150px;
+  font-size: 16px;
+  top: 3px;
+}
+
+/* 아래 화살표 */
+.kor-menu .arrow {
+  display: inline-block;
+  margin-left: 5px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  /* 흰색 삼각형 */
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+/* 클릭 시 드롭다운 보여주기 */
+.kor-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* 메뉴 바로 아래 */
+  right: 0;
+  /* KOR 메뉴 기준 오른쪽 */
+  background-color: #fff;
+  border-radius: 0px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+  z-index: 10;
+}
+
+.kor-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.kor-dropdown li {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 500;
+}
+
+.kor-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* active 클래스가 붙으면 보여주기 */
+.kor-menu.active .kor-dropdown {
+  display: block;
+}
+
+.kor-menu.active .arrow {
+  transform: rotate(180deg);
+  /* 클릭 시 화살표 회전 */
+}
+
+
+.menu-item .hover-line {
+  position: absolute;
+  bottom: -17px;
+  /* 글씨 바로 아래 */
+  left: 50%;
+  /* 글씨 중앙 기준 */
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover .hover-line {
+  width: 160px;
+  /* 항상 고정 길이 */
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6d6c6c3f;
+}
+
+header:hover::after {
+  bottom: 150px;
+}
+
+/* ===================== 서브메뉴 ===================== */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: transparent;
+  padding: 20px 0;
+  list-style: none;
+  min-width: 200px;
+  font-size: 18px;
+  width: 150px;
+  height: 150px;
+}
+
+.menu-item:hover>.submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 8px 20px;
+  color: #fff;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  background: transparent;
+  line-height: 30px;
+  left: -40px;
+  position: relative;
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+
+.submenu li:hover {
+  color: #008E43;
+}
+
+.menu-item {
+  position: relative;
+  /* 세로라인 기준 위치 */
+}
+
+/* ===================== 서브메뉴 컨테이너 ===================== */
+.submenu-container {
+  position: absolute;
+  top: 84px;
+  /* 헤더 바로 아래 */
+  left: 0;
+  width: 100%;
+  height: 150px;
+  /* 서브메뉴 높이 */
+  display: flex;
+  justify-content: flex-start;
+  pointer-events: none;
+  position: relative;
+}
+
+.submenu-lines {
+  position: absolute;
+  top: 16px;
+  /* 전체 위쪽 위치 */
+  left: -35px;
+  /* 전체 통째로 왼쪽 이동 */
+  height: 100%;
+  pointer-events: none;
+}
+
+.submenu-line {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  /* left는 HTML에서 0,160,320… 유지 */
+}
+
+.submenu-column {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+  pointer-events: auto;
+  /* 텍스트 클릭 가능 */
+}
+
+.submenu-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.78);
+  pointer-events: none;
+}
+
+header:hover>.submenu-container {
+  height: 200px;
+}
+
+/* ===================== 서브메뉴 컨테이너 ===================== */
+.submenu-container ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  /* li 사이 gap 없앰 */
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  position: relative;
+}
+
+/* li 폭 고정 160px */
+.submenu-container li {
+  width: 160px;
+  /* li 폭을 160px로 고정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+.submenu-container li:last-child {
+  border-right: none;
+  /* 마지막 li는 라인 제거 */
+}
+
+/* 회사소개 3열 서브메뉴 */
+.menu-item>.submenu-container {
+  display: flex;
+  position: absolute;
+  top: 84px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  pointer-events: none;
+}
+
+.menu-item>.submenu-container .submenu-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  padding: 0;
+  pointer-events: auto;
+}
+
+
+.media-menu {
+  margin-left: -20px;
+  /* 원하는 만큼 왼쪽 이동 */
+}
+
+
+/* li 개수에 맞춰 160px 간격으로 세로 라인 표시 */
+.submenu-container li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #fff;
+  left: calc(100% / 7);
+  /* li 총 7개 기준 160px 간격 */
+}
+
+/* 호버 텍스트 색상 유지 */
+.submenu-container li:hover {
+  color: #f0f0f0;
+}
+
+
+
+
+.submenu li:hover {
+  color: #008E43;
+  /* 마우스 올리면 초록색 */
+  background: transparent;
+  /* 배경 네모 제거 */
+}
+
+header:hover .submenu {
+  display: block;
+}
+
+/* ===================== 메인 비주얼 ===================== */
+.main-visual {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-visual .slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.visual-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.visual-text h1 {
+  font-size: 70px;
+}
+
+.visual-text p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+/* ================= 0.1 / 0.2 / 0.3 ================= */
+.numbers {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 330px;
+}
+
+.number-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  font-weight: 300;
+  width: 150px;
+  color: #ccc;
+}
+
+.number-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* 흰색 진행바 */
+.number-item .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 3s linear;
+  z-index: 2;
+  margin-top: 10px;
+  position: relative;
+}
+
+@keyframes lineFill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 125px;
+  }
+}
+
+/* ================= Redefine 영역 ================= */
+.redefine {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  transition: background-color 0.5s ease;
+}
+
+
+
+/* 글자 흰색 모드 */
+.redefine .brand.white-text {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.redefine h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.redefine .desc {
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 50px;
+}
+
+.redefine .brand {
+  font-size: 190px;
+  font-weight: bold;
+  background: url('../img/text_to_img1.jpg') no-repeat center/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.redefine .brand::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--after-img, url('../img/text_to_img1.jpg')) no-repeat center/cover;
+  background-size: cover;
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.animate-after::after {
+  animation: overlayFade 2s forwards 0s;
+}
+
+@keyframes overlayFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.redefine .buttons button {
+  width: 170px;
+  height: 58px;
+  font-size: 22px;
+  margin: 10px;
+  font-weight: bold;
+  background: transparent;
+  border: 1.5px solid #000;
+  color: #000;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  top: 50px;
+}
+
+.redefine .sub {
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 26px;
+  top: 80px;
+  position: relative;
+}
+
+.redefine .content {
+  position: relative;
+  text-align: center;
+}
+
+.btn-disabled {
+  display: inline-block;
+  font-size: 24px;
+  color: #181818;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  padding-top: 70px;
+  cursor: default;
+  font-weight: 600;
+  position: relative;
+}
+
+.redefine .p {
+  margin-bottom: 30px;
+}
+
+.redefine a {
+  font-size: 24px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ================= 배너 ================= */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  margin-top: 30px;
+
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h2 {
+  font-size: 42px;
+  color: #ccc;
+}
+
+.banner-text button {
+  margin-top: 20px;
+  width: 210px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  position: relative;
+  top: 50px;
+}
+
+/* ================= News ================= */
+.news {
+  padding: 100px 80px;
+  position: relative;
+}
+
+.news h2,
+.news h3 {
+  position: relative;
+  right: -160px;
+  color: #181818;
+  position: relative;
+  top: 10px;
+
+}
+
+.news h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  position: relative;
+  margin-left: -1680px;
+}
+
+.news h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-left: -1600px;
+}
+
+.news-items {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.news-items .item {
+  width: 450px;
+}
+
+.news-items img {
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.news-items p {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.news-button button {
+  font-size: 18px;
+  padding: 10px 20px;
+  position: relative;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 30px;
+  color: #000;
+  top: -470px;
+  left: 620px;
+
+
+
+}
+
+.news-button button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ================= Youtube ================= */
+.youtube {
+  padding: 100px 80px;
+  margin-top: -80px;
+}
+
+.youtube h2 {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 130px;
+  top: 20px;
+  position: relative;
+  color: #000;
+}
+
+.youtube-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.youtube h3 {
+  font-size: 50px;
+  color: #000;
+  margin: 0;
+  text-align: left;
+  margin-left: 130px;
+}
+
+.youtube button {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 30px;
+  color: #000;
+  margin-right: 150px;
+}
+
+.youtube button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+.videos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.main-video img {
+  width: 600px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.sub-videos {
+  display: grid;
+  grid-template-columns: repeat(2, 390px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.sub-videos img {
+  width: 390px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+
+.image-banner {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  margin-top: 30px;
+
+}
+
+.image-banner img {
+  width: 1920px;
+  height: 530px;
+
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.image-text h2 {
+  font-size: 42px;
+  color: #ffffff;
+}
+
+/* ================= Founder ================= */
+.founder {
+  position: relative;
+  width: 1440px;
+  height: 280px;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 130px;
+}
+
+
+/* 텍스트는 버튼 기준으로 중앙 정렬 */
+.founder-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.founder-slide.active {
+  display: block;
+  /* flex 대신 block 사용 */
+}
+
+.founder-slide img {
+  width: 440px;
+  height: auto;
+  /* 높이 자동 */
+  max-height: 375px;
+  /* 원하는 최대 높이 */
+  object-fit: contain;
+  /* 잘리지 않고 전체 이미지 보이기 */
+  margin-right: 1000px;
+  margin-top: -33px;
+}
+
+
+
+/* 버튼 고정 */
+.founder-slide p {
+  font-family: 'Bookk Myungjo', serif;
+  font-size: 28px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  top: -230px;
+  left: 200px;
+  position: relative;
+}
+
+/* 버튼 */
+.founder button {
+  display: block;
+  margin-top: 20px;
+  /* 텍스트와 버튼 사이 간격 */
+  font-size: 18px;
+  padding: 10px 60px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid #000;
+  /* 검정 테두리 */
+  background-color: transparent;
+  /* 내부 투명 */
+  color: #000;
+  /* 글자 검정 */
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  top: -220px;
+  left: 800px;
+}
+
+.founder button:hover {
+  background-color: #000;
+  /* 호버 시 배경 검정 */
+  color: #fff;
+  /* 글자 흰색 */
+}
+
+
+
+/* ===================== 윤리경영 ===================== */
+/* ===================== 공통 섹션 스타일 ===================== */
+/* 공통 스타일 */
+.ethics,
+.accuse,
+.contact {
+  height: 80px;
+  /* 높이를 작게 통일 */
+  padding: 10px;
+  /* 위아래 여백 줄임 */
+  max-width: 1440px;
+  margin: 0 auto 20px;
+  /* 섹션 간 간격 */
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 텍스트 세로 가운데 */
+  position: relative;
+
+}
+
+/* 윤리경영: 상단 + 하단 라인 */
+.ethics {
+  position: relative;
+  /* ::before 위치 기준 */
+  border-bottom: 2px solid #8685858e;
+  /* 하단 라인만 유지 */
+  position: relative;
+}
+
+.ethics::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  /* 여기 값으로 라인을 위로 올림 */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0000008c;
+  /* 상단 라인 색상 */
+}
+
+.ethics h2 {
+  position: relative;
+  left: -660px;
+  top: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.accuse h2 {
+  position: relative;
+  left: -660px;
+  top: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.contact h2 {
+  position: relative;
+  left: -660px;
+  top: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.ethics p {
+  font-size: 18px;
+  font-weight: 600;
+  top: -30px;
+  position: relative;
+  line-height: 28px;
+  color: #000000;
+}
+
+
+.accuse p {
+  font-size: 18px;
+  font-weight: 600;
+  top: -30px;
+  position: relative;
+  line-height: 28px;
+  color: #000000;
+}
+
+.contact p {
+  font-size: 18px;
+  font-weight: 600;
+  top: -30px;
+  position: relative;
+  line-height: 28px;
+  color: #000000;
+}
+
+
+/* 제보센터: 하단 라인 */
+.accuse {
+  border-bottom: 2px solid #8685858e;
+}
+
+/* 문의하기: 하단 라인 */
+.contact {
+  border-bottom: 2px solid #8685858e;
+  margin-bottom: 100px;
+}
+
+/* 텍스트 스타일 */
+.container h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 0;
+}
+
+
+/* ===================== Footer ===================== */
+.footer {
+  background-color: #ffffff;
+  /* 푸터 배경 검정 */
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* 상단 로고 + 링크 */
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 40px;
+  /* 로고 높이 */
+  position: relative;
+  left: 60px;
+}
+
+/* 링크 스타일 */
+.footer-links {
+  display: flex;
+  gap: 30px;
+  /* 링크 간격 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  left: -1080px;
+  position: relative;
+  top: 45px;
+  font-weight: 700;
+
+}
+
+.footer-links li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  left: 60px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/* 하단 회사 정보 */
+.footer-info {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ccc;
+  text-align: left;
+  /* 왼쪽 정렬 */
+  position: relative;
+  left: 60px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  color: #1d1d1dda;
+  font-size: 16px;
+
+  position: relative;
+  top: 30px;
+}
+
+.footer-info p:last-child {
+  margin-top: 20px;
+  /* 위쪽 여백 늘리기 */
+  margin-bottom: 0;
+  /* 아래쪽 여백 제거 */
+  font-size: 14px;
+}
+
+
+.family-btn {
+  font-size: 16px;
+  background-color: #D7D6D6;
+  width: 180px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  top: -170px;
+  left: 1000px;
+
+}
+
+/* 아래 방향 속 빈 삼각형 */
+.family-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px; /* 버튼 오른쪽 위치 */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #000; /* 검정 테두리, 속 빈 삼각형처럼 보임 */
+  
+
+
+}
