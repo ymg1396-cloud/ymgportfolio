@@ -1,0 +1,549 @@
+/* ================== 가로 스크롤/검정 여백 방지 ================== */
+html,
+body {
+    overflow-x: clip;
+    /* hidden 대신 clip 사용 (더 안전) */
+    margin: 0;
+    padding: 0;
+}
+
+/* ================== 모바일 최대 768px ================== */
+@media screen and (max-width: 768px) {
+
+    /* ---------- 히어로 섹션 ---------- */
+    .hero-content {
+        width: 90%;
+        text-align: center;
+        margin: 20px auto 40px auto;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p.subtitle {
+        font-size: 14px;
+    }
+
+    .hero-cta .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .container {
+        text-align: center;
+        position: relative;
+        left: 3px;
+    }
+
+    /* ---------- 카드 그리드 ---------- */
+
+
+    /* ---------- ABOUT ME 섹션 ---------- */
+    .about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    .about h2 {
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        top: 220px;
+        left: 8px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-image img {
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        left: 8px;
+        top: -100px;
+    }
+
+    .about-image h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        left: 3px;
+        top: 35px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        line-height: 1.4;
+        word-break: break-word;
+        white-space: normal;
+        margin-bottom: 10px;
+        position: relative;
+        top: -150px;
+    }
+
+    .about-info .profile h4,
+    .about-info .character h4,
+    .about-info .skills h4,
+    .about-info .education h4 {
+        font-size: 20px;
+        position: relative;
+        top: -150px;
+    }
+
+    .about-info .profile .label {
+        font-size: 16px;
+    }
+
+    .about-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .about-info>div {
+        width: 100%;
+    }
+
+    .about-info h4 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .about-info p,
+    .about-info ul li {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .skills ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .skills ul li img {
+        width: 25px;
+        height: auto;
+        position: relative;
+        top: -160px;
+    }
+
+    .highlight {
+        font-size: 16px;
+        position: relative;
+        top: -150px;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        color: #fff;
+        font-size: 12px;
+        gap: 30px;
+        white-space: nowrap;
+    }
+
+    /* ---------- 디자인 모달/웹 디자인 섹션 ---------- */
+    .design-modal .design-content,
+    .section-web-design .card-grid {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    /* ---------- 스크롤 버튼 ---------- */
+    #scrollTopBtn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.section-work,
+#videoSection,
+.section-web-design {
+    display: none;
+    width: 90%;
+    /* 화면 폭 90% */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+    padding: 10px 5px;
+    /* 패딩 줄임 */
+    box-sizing: border-box;
+}
+
+/* ================== 전체 슬라이드 컨테이너 ================== */
+.all-slides {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ================== 카드 스타일 ================== */
+.card,
+.cards,
+.video-card,
+.card-web {
+    flex: 0 0 auto;
+    margin: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    /* JS에서 보여주는 카드만 block */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 카드 본문 */
+.card-body h3,
+.card-body p {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .webMeta {
+        display: none !important; /* 강제로 숨김 */
+    }
+}
+@media screen and (max-width: 768px) {
+    .contactMeta {
+        display: none !important; /* 강제로 숨김 */
+    }
+}
+
+
+
+
+
+/* ================== 버튼 ================== */
+.slide-btn-container,
+.slide-btn-container-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.slide-btn-container img,
+.slide-btn-container-mobile img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* ================== 히어로 / ABOUT / 기본 섹션 ================== */
+.hero-content,
+.about,
+.about-content,
+.about-image,
+.about-text,
+.about-info {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ================== 반응형 ================== */
+.card,
+.cards,
+.video-card {
+    width: 80%;
+    /* 원래 100% -> 80% */
+    margin: 10px auto;
+    /* 중앙 배치 */
+    position: relative;
+    top: 40px;
+}
+
+.section-work,
+#videoSection,
+.section-web-design {
+    display: none;
+    /* JS에서 currentSection에 따라 표시 */
+    width: 100%;
+    padding: 20px 10px;
+}
+
+/* ---------------- 전체 슬라이드 컨테이너 ---------------- */
+.all-slides {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.card img,
+.cards img,
+.video-card img,
+.card-web img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+/* ---------------- 히어로 / ABOUT / 기본 섹션 ---------------- */
+.hero-content,
+.about,
+.about-content,
+.about-image,
+.about-text,
+.about-info {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ---------------- 반응형 예시 ---------------- */
+@media screen and (max-width: 480px) {
+
+    .card,
+    .cards,
+    .video-card {
+        flex: 0 0 100%;
+        /* 작은 화면은 한 장씩 */
+    }
+}
+
+.card-grid,
+.video-card-grid {
+    display: flex;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+.card,
+.video-card {
+    flex: 0 0 80%;
+    /* 한 화면에 보여질 카드 비율 */
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  #videoSection,
+  #videoSection .video-card-grid,
+  #videoSection .section-btn-container {
+    background: #070707 !important; /* 모든 배경 제거 */
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+  }
+
+  #videoSection .section-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #videoSection .section-btn {
+    top: 0 !important;
+  }
+}
+
+
+
+
+#videoSection {
+    background: transparent !important;
+}
+
+
+
+/* ---------------- 섹션 전환 버튼 ---------------- */
+.section-btn-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    color: #070707;
+}
+
+
+.section-btn {
+    padding: 10px 20px;
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    position: relative;
+    margin: 40px;
+}
+
+.section-btn:hover {
+    background-color: #555;
+}
+
+
+
+
+/* 웹퍼블리싱과 동일하게 중앙 정렬 */
+.video-card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    box-sizing: border-box;
+    left: -105px;
+    top: -100px;
+}
+
+#videoSection {
+  position: relative;
+  background-color: transparent; /* 혹시 기본 검정 있으면 제거 */
+  overflow: visible; /* 내부 요소 위로 올려도 높이 유지 */
+}
+
+#videoSection .video-card-grid {
+  position: relative;
+  top: -100px;
+  margin-bottom: -100px; /* 올린 만큼 마진 빼기 */
+}
+
+.video-card {
+    flex: 90%;
+      margin: 0 auto;
+
+}
+.video-card img {
+    width: 100%;
+    height: 100%;         /* 카드 높이에 맞춤 */
+    object-fit: cover;    /* 카드 영역 꽉 채움 */
+    display: block;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    overflow: visible; /* 카드가 잘리는 거 방지 */
+    min-height: auto;  /* 필요 시 높이 자동 */
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 20px;
+
+}
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    display: none;
+     height: 300px; /* 예: 모든 카드 고정 */
+   aspect-ratio: 4 / 3; /* 카드 비율 유지 */
+    overflow: hidden;
+}
+
+.card-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 웹디자인 섹션 카드 전체 정렬 */
+.section-web-design .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  left: -40px;
+}
+
+/* 모든 카드 크기 동일하게 고정 */
+.section-web-design .card,
+.section-web-design .cards {
+  width: 300px;       /* 카드 가로 크기 */
+  height: 220px;      /* 카드 세로 크기 */
+  border-radius: 16px;
+  overflow: hidden;   /* 내부 넘치는 부분 잘라냄 */
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* 카드 내부 이미지 컨테이너 */
+.section-web-design .card-thumb,
+.section-web-design .cardss {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+/* 이미지 꽉 채우기 */
+.section-web-design .card-thumb img,
+.section-web-design .cardss img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 비율 유지하면서 꽉 채움 */
+  display: block;
+}
+
