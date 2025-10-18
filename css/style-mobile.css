@@ -1,16 +1,21 @@
-/* ================== 가로 스크롤/검정 여백 방지 ================== */
+@media screen and (max-width: 768px) {
+  .card,
+  .cards,
+  .video-card {
+    pointer-events: none !important; 
+  }
+}
+
 html,
 body {
     overflow-x: clip;
-    /* hidden 대신 clip 사용 (더 안전) */
     margin: 0;
     padding: 0;
 }
 
-/* ================== 모바일 최대 768px ================== */
 @media screen and (max-width: 768px) {
 
-    /* ---------- 히어로 섹션 ---------- */
+  
     .hero-content {
         width: 90%;
         text-align: center;
@@ -36,10 +41,7 @@ body {
         left: 3px;
     }
 
-    /* ---------- 카드 그리드 ---------- */
 
-
-    /* ---------- ABOUT ME 섹션 ---------- */
     .about {
         width: 100%;
         display: flex;
@@ -181,7 +183,7 @@ body {
         white-space: nowrap;
     }
 
-    /* ---------- 디자인 모달/웹 디자인 섹션 ---------- */
+ 
     .design-modal .design-content,
     .section-web-design .card-grid {
         width: 90%;
@@ -194,7 +196,6 @@ body {
 
 
 
-    /* ---------- 스크롤 버튼 ---------- */
     #scrollTopBtn {
         width: 40px;
         height: 40px;
@@ -206,15 +207,12 @@ body {
 .section-web-design {
     display: none;
     width: 90%;
-    /* 화면 폭 90% */
     margin: 0 auto;
-    /* 중앙 정렬 */
     padding: 10px 5px;
-    /* 패딩 줄임 */
     box-sizing: border-box;
 }
 
-/* ================== 전체 슬라이드 컨테이너 ================== */
+
 .all-slides {
     display: flex;
     flex-direction: column;
@@ -222,7 +220,6 @@ body {
     overflow: hidden;
 }
 
-/* ================== 카드 스타일 ================== */
 .card,
 .cards,
 .video-card,
@@ -232,12 +229,12 @@ body {
     border-radius: 8px;
     overflow: hidden;
     display: none;
-    /* JS에서 보여주는 카드만 block */
+ 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-/* 카드 본문 */
+
 .card-body h3,
 .card-body p {
     text-align: center;
@@ -251,12 +248,12 @@ body {
 
 @media screen and (max-width: 768px) {
     .webMeta {
-        display: none !important; /* 강제로 숨김 */
+        display: none !important;
     }
 }
 @media screen and (max-width: 768px) {
     .contactMeta {
-        display: none !important; /* 강제로 숨김 */
+        display: none !important;
     }
 }
 
@@ -264,7 +261,7 @@ body {
 
 
 
-/* ================== 버튼 ================== */
+
 .slide-btn-container,
 .slide-btn-container-mobile {
     display: flex;
@@ -280,7 +277,7 @@ body {
     cursor: pointer;
 }
 
-/* ================== 히어로 / ABOUT / 기본 섹션 ================== */
+
 .hero-content,
 .about,
 .about-content,
@@ -292,14 +289,12 @@ body {
     margin: 0 auto;
 }
 
-/* ================== 반응형 ================== */
+
 .card,
 .cards,
 .video-card {
     width: 80%;
-    /* 원래 100% -> 80% */
     margin: 10px auto;
-    /* 중앙 배치 */
     position: relative;
     top: 40px;
 }
@@ -308,12 +303,11 @@ body {
 #videoSection,
 .section-web-design {
     display: none;
-    /* JS에서 currentSection에 따라 표시 */
     width: 100%;
     padding: 20px 10px;
 }
 
-/* ---------------- 전체 슬라이드 컨테이너 ---------------- */
+
 .all-slides {
     display: flex;
     flex-direction: column;
@@ -339,7 +333,7 @@ body {
 
 
 
-/* ---------------- 히어로 / ABOUT / 기본 섹션 ---------------- */
+
 .hero-content,
 .about,
 .about-content,
@@ -351,14 +345,13 @@ body {
     margin: 0 auto;
 }
 
-/* ---------------- 반응형 예시 ---------------- */
+
 @media screen and (max-width: 480px) {
 
     .card,
     .cards,
     .video-card {
         flex: 0 0 100%;
-        /* 작은 화면은 한 장씩 */
     }
 }
 
@@ -372,14 +365,13 @@ body {
 .card,
 .video-card {
     flex: 0 0 80%;
-    /* 한 화면에 보여질 카드 비율 */
     margin-right: 10px;
 }
 @media screen and (max-width: 768px) {
   #videoSection,
   #videoSection .video-card-grid,
   #videoSection .section-btn-container {
-    background: #070707 !important; /* 모든 배경 제거 */
+    background: #070707 !important; 
     padding: 0 !important;
     margin: 0 !important;
     min-height: 0 !important;
@@ -406,7 +398,7 @@ body {
 
 
 
-/* ---------------- 섹션 전환 버튼 ---------------- */
+
 .section-btn-container {
     position: relative;
     width: 100%;
@@ -438,7 +430,6 @@ body {
 
 
 
-/* 웹퍼블리싱과 동일하게 중앙 정렬 */
 .video-card-grid {
     display: flex;
     flex-direction: column;
@@ -455,14 +446,14 @@ body {
 
 #videoSection {
   position: relative;
-  background-color: transparent; /* 혹시 기본 검정 있으면 제거 */
-  overflow: visible; /* 내부 요소 위로 올려도 높이 유지 */
+  background-color: transparent; 
+  overflow: visible; 
 }
 
 #videoSection .video-card-grid {
   position: relative;
   top: -100px;
-  margin-bottom: -100px; /* 올린 만큼 마진 빼기 */
+  margin-bottom: -100px;
 }
 
 .video-card {
@@ -472,8 +463,8 @@ body {
 }
 .video-card img {
     width: 100%;
-    height: 100%;         /* 카드 높이에 맞춤 */
-    object-fit: cover;    /* 카드 영역 꽉 채움 */
+    height: 100%;         
+    object-fit: cover;    
     display: block;
 }
 
@@ -483,8 +474,8 @@ body {
     align-items: center;
     gap: 20px;
     width: 100%;
-    overflow: visible; /* 카드가 잘리는 거 방지 */
-    min-height: auto;  /* 필요 시 높이 자동 */
+    overflow: visible; 
+    min-height: auto;  
     padding: 0;
     box-sizing: border-box;
     position: relative;
@@ -496,8 +487,8 @@ body {
     width: 90%;
     margin: 0 auto;
     display: none;
-     height: 300px; /* 예: 모든 카드 고정 */
-   aspect-ratio: 4 / 3; /* 카드 비율 유지 */
+     height: 300px; 
+   aspect-ratio: 4 / 3; 
     overflow: hidden;
 }
 
@@ -506,7 +497,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
-/* 웹디자인 섹션 카드 전체 정렬 */
+
 .section-web-design .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -518,18 +509,18 @@ body {
   left: -40px;
 }
 
-/* 모든 카드 크기 동일하게 고정 */
+
 .section-web-design .card,
 .section-web-design .cards {
-  width: 300px;       /* 카드 가로 크기 */
-  height: 220px;      /* 카드 세로 크기 */
+  width: 300px;     
+  height: 220px;     
   border-radius: 16px;
-  overflow: hidden;   /* 내부 넘치는 부분 잘라냄 */
+  overflow: hidden;   
   position: relative;
   flex-shrink: 0;
 }
 
-/* 카드 내부 이미지 컨테이너 */
+
 .section-web-design .card-thumb,
 .section-web-design .cardss {
   width: 100%;
@@ -538,12 +529,12 @@ body {
   display: block;
 }
 
-/* 이미지 꽉 채우기 */
+
 .section-web-design .card-thumb img,
 .section-web-design .cardss img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* 비율 유지하면서 꽉 채움 */
+  object-fit: cover;   
   display: block;
 }
 

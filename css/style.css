@@ -1,4 +1,4 @@
-/* ===================== Reset ===================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +13,7 @@ body {
   color: #333;
 }
 
-/* ===================== 헤더 ===================== */
-/* ===================== HEADER ===================== */
+
 header {
   /* position: fixed;
   top: 0;
@@ -37,7 +36,7 @@ header:hover {
 
 header.scrolled {
   background-color: #111111e1;
-  /* 올릴 때 검정 */
+
 }
 
 header .logo img {
@@ -89,166 +88,137 @@ header:hover .submenu-container ul {
 }
 
 
-/* ===================== main-menu li 아래 초록 라인 ===================== */
+
 .menu-item {
   position: relative;
-  /* hover-line 기준 */
+
 
 
 }
 
-/* ===================== 회사소개 라인 ===================== */
+
 #line-company {
   position: absolute;
-
   bottom: 0;
-  /* 메뉴 텍스트 바로 아래 */
   left: -35px;
   top: 40px;
-  /* 원하는 시작 위치 */
   width: 160px;
-  /* 라인 길이 */
   height: 2px;
   background-color: #008E43;
   opacity: 0;
-  /* 기본에는 안 보이도록 */
   transition: opacity 0.3s, width 0.3s, left 0.3s;
 
 }
 
 .menu-item:hover #line-company {
   opacity: 1;
-  /* 마우스 올리면 보임 */
+
 }
 
 
-/* ===================== 사업소개 라인 ===================== */
+
 #line-business {
   position: absolute;
 
   bottom: 0;
-  /* 메뉴 텍스트 바로 아래 */
   left: -38px;
   top: 40px;
-  /* 원하는 시작 위치 */
   width: 160px;
-  /* 라인 길이 */
   height: 2px;
   background-color: #008E43;
   opacity: 0;
-  /* 기본에는 안 보이도록 */
   transition: opacity 0.3s, width 0.3s, left 0.3s;
 }
 
 .menu-item:hover #line-business {
   opacity: 1;
-  /* 마우스 올리면 보임 */
+
 }
 
-/* ===================== 기업문화 라인 ===================== */
+
 
 #line-culture {
   position: absolute;
 
   bottom: 0;
-  /* 메뉴 텍스트 바로 아래 */
   left: -40px;
   top: 40px;
-  /* 원하는 시작 위치 */
   width: 160px;
-  /* 라인 길이 */
+
   height: 2px;
   background-color: #008E43;
   opacity: 0;
-  /* 기본에는 안 보이도록 */
   transition: opacity 0.3s, width 0.3s, left 0.3s;
 }
 
 .menu-item:hover #line-culture {
   opacity: 1;
-  /* 마우스 올리면 보임 */
+
 }
 
-/* ===================== 지속가능성 라인 ===================== */
+
 #line-sustain {
   position: absolute;
-
   bottom: 0;
-  /* 메뉴 텍스트 바로 아래 */
   left: -42px;
   top: 40px;
-  /* 원하는 시작 위치 */
   width: 160px;
-  /* 라인 길이 */
   height: 2px;
   background-color: #008E43;
   opacity: 0;
-  /* 기본에는 안 보이도록 */
   transition: opacity 0.3s, width 0.3s, left 0.3s;
 }
 
 .menu-item:hover #line-sustain {
   opacity: 1;
-  /* 마우스 올리면 보임 */
+
 }
 
-/* ===================== 미디어 라인 ===================== */
 #line-media {
   position: absolute;
-
   bottom: 0;
-  /* 메뉴 텍스트 바로 아래 */
   left: -45px;
   top: 40px;
-  /* 원하는 시작 위치 */
   width: 160px;
-  /* 라인 길이 */
   height: 2px;
   background-color: #008E43;
   opacity: 0;
-  /* 기본에는 안 보이도록 */
   transition: opacity 0.3s, width 0.3s, left 0.3s;
 }
 
 .menu-item:hover #line-media {
   opacity: 1;
-  /* 마우스 올리면 보임 */
+
 }
 
-/* ===================== 고객지원 라인 ===================== */
+
 #line-support {
   position: absolute;
-
   bottom: 0;
-  /* 메뉴 텍스트 바로 아래 */
   left: -28px;
   top: 40px;
-  /* 원하는 시작 위치 */
   width: 160px;
-  /* 라인 길이 */
   height: 2px;
   background-color: #008E43;
   opacity: 0;
-  /* 기본에는 안 보이도록 */
   transition: opacity 0.3s, width 0.3s, left 0.3s;
 }
 
 .menu-item:hover #line-support {
   opacity: 1;
-  /* 마우스 올리면 보임 */
+
 }
 
 
 .kor-menu {
   position: relative;
-  /* 드롭다운 위치 기준 */
   cursor: pointer;
   left: 150px;
   font-size: 16px;
   top: 3px;
 }
 
-/* 아래 화살표 */
+
 .kor-menu .arrow {
   display: inline-block;
   margin-left: 5px;
@@ -257,19 +227,16 @@ header:hover .submenu-container ul {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #fff;
-  /* 흰색 삼각형 */
   vertical-align: middle;
   transition: transform 0.3s;
 }
 
-/* 클릭 시 드롭다운 보여주기 */
+
 .kor-dropdown {
   display: none;
   position: absolute;
   top: 100%;
-  /* 메뉴 바로 아래 */
   right: 0;
-  /* KOR 메뉴 기준 오른쪽 */
   background-color: #fff;
   border-radius: 0px;
 
@@ -295,23 +262,21 @@ header:hover .submenu-container ul {
   background-color: #f0f0f0;
 }
 
-/* active 클래스가 붙으면 보여주기 */
+
 .kor-menu.active .kor-dropdown {
   display: block;
 }
 
 .kor-menu.active .arrow {
   transform: rotate(180deg);
-  /* 클릭 시 화살표 회전 */
+
 }
 
 
 .menu-item .hover-line {
   position: absolute;
   bottom: -17px;
-  /* 글씨 바로 아래 */
   left: 50%;
-  /* 글씨 중앙 기준 */
   transform: translateX(-50%);
   width: 0;
   height: 2px;
@@ -321,7 +286,7 @@ header:hover .submenu-container ul {
 
 .menu-item:hover .hover-line {
   width: 160px;
-  /* 항상 고정 길이 */
+
 }
 
 header::after {
@@ -338,7 +303,7 @@ header:hover::after {
   bottom: 150px;
 }
 
-/* ===================== 서브메뉴 ===================== */
+
 .submenu {
   display: none;
   position: absolute;
@@ -376,18 +341,16 @@ header:hover::after {
 
 .menu-item {
   position: relative;
-  /* 세로라인 기준 위치 */
+
 }
 
-/* ===================== 서브메뉴 컨테이너 ===================== */
+
 .submenu-container {
   position: absolute;
   top: 84px;
-  /* 헤더 바로 아래 */
   left: 0;
   width: 100%;
   height: 150px;
-  /* 서브메뉴 높이 */
   display: flex;
   justify-content: flex-start;
   pointer-events: none;
@@ -397,9 +360,7 @@ header:hover::after {
 .submenu-lines {
   position: absolute;
   top: 16px;
-  /* 전체 위쪽 위치 */
   left: -35px;
-  /* 전체 통째로 왼쪽 이동 */
   height: 100%;
   pointer-events: none;
 }
@@ -410,7 +371,7 @@ header:hover::after {
   width: 1px;
   height: 100%;
   background-color: #ccc;
-  /* left는 HTML에서 0,160,320… 유지 */
+
 }
 
 .submenu-column {
@@ -418,7 +379,7 @@ header:hover::after {
   padding: 0 20px;
   margin: 0;
   pointer-events: auto;
-  /* 텍스트 클릭 가능 */
+
 }
 
 .submenu-line {
@@ -434,22 +395,21 @@ header:hover>.submenu-container {
   height: 200px;
 }
 
-/* ===================== 서브메뉴 컨테이너 ===================== */
+
 .submenu-container ul {
   display: flex;
   justify-content: flex-start;
   gap: 0;
-  /* li 사이 gap 없앰 */
   list-style: none;
   padding: 5px 0;
   margin: 0;
   position: relative;
 }
 
-/* li 폭 고정 160px */
+
+
 .submenu-container li {
   width: 160px;
-  /* li 폭을 160px로 고정 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -461,10 +421,10 @@ header:hover>.submenu-container {
 
 .submenu-container li:last-child {
   border-right: none;
-  /* 마지막 li는 라인 제거 */
+
 }
 
-/* 회사소개 3열 서브메뉴 */
+
 .menu-item>.submenu-container {
   display: flex;
   position: absolute;
@@ -486,11 +446,11 @@ header:hover>.submenu-container {
 
 .media-menu {
   margin-left: -20px;
-  /* 원하는 만큼 왼쪽 이동 */
+
 }
 
 
-/* li 개수에 맞춰 160px 간격으로 세로 라인 표시 */
+
 .submenu-container li:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -499,10 +459,10 @@ header:hover>.submenu-container {
   width: 1px;
   background-color: #fff;
   left: calc(100% / 7);
-  /* li 총 7개 기준 160px 간격 */
+
 }
 
-/* 호버 텍스트 색상 유지 */
+
 .submenu-container li:hover {
   color: #f0f0f0;
 }
@@ -512,16 +472,15 @@ header:hover>.submenu-container {
 
 .submenu li:hover {
   color: #008E43;
-  /* 마우스 올리면 초록색 */
   background: transparent;
-  /* 배경 네모 제거 */
+
 }
 
 header:hover .submenu {
   display: block;
 }
 
-/* ===================== 메인 비주얼 ===================== */
+
 .main-visual {
   position: relative;
   height: 100vh;
@@ -575,7 +534,7 @@ header:hover .submenu {
   margin-top: 30px;
 }
 
-/* ================= 0.1 / 0.2 / 0.3 ================= */
+
 .numbers {
   display: flex;
   justify-content: center;
@@ -607,7 +566,7 @@ header:hover .submenu {
   z-index: 1;
 }
 
-/* 흰색 진행바 */
+
 .number-item .line {
   position: absolute;
   bottom: 0;
@@ -633,7 +592,7 @@ header:hover .submenu {
   }
 }
 
-/* ================= Redefine 영역 ================= */
+
 .redefine {
   position: relative;
   text-align: center;
@@ -643,7 +602,7 @@ header:hover .submenu {
 
 
 
-/* 글자 흰색 모드 */
+
 .redefine .brand.white-text {
   background: none !important;
   -webkit-background-clip: initial !important;
@@ -755,7 +714,7 @@ header:hover .submenu {
   margin-top: 10px;
 }
 
-/* ================= 배너 ================= */
+
 .banner {
   position: relative;
   width: 100%;
@@ -798,7 +757,7 @@ header:hover .submenu {
   top: 50px;
 }
 
-/* ================= News ================= */
+
 .news {
   padding: 100px 80px;
   position: relative;
@@ -872,7 +831,7 @@ header:hover .submenu {
   color: #fff;
 }
 
-/* ================= Youtube ================= */
+
 .youtube {
   padding: 100px 80px;
   margin-top: -80px;
@@ -978,7 +937,7 @@ header:hover .submenu {
   color: #ffffff;
 }
 
-/* ================= Founder ================= */
+
 .founder {
   position: relative;
   width: 1440px;
@@ -990,7 +949,7 @@ header:hover .submenu {
 }
 
 
-/* 텍스트는 버튼 기준으로 중앙 정렬 */
+
 .founder-slide {
   display: none;
   width: 100%;
@@ -1000,24 +959,21 @@ header:hover .submenu {
 
 .founder-slide.active {
   display: block;
-  /* flex 대신 block 사용 */
+
 }
 
 .founder-slide img {
   width: 440px;
   height: auto;
-  /* 높이 자동 */
   max-height: 375px;
-  /* 원하는 최대 높이 */
   object-fit: contain;
-  /* 잘리지 않고 전체 이미지 보이기 */
   margin-right: 1000px;
   margin-top: -33px;
 }
 
 
 
-/* 버튼 고정 */
+
 .founder-slide p {
   font-family: 'Bookk Myungjo', serif;
   font-size: 28px;
@@ -1029,21 +985,18 @@ header:hover .submenu {
   position: relative;
 }
 
-/* 버튼 */
+
 .founder button {
   display: block;
   margin-top: 20px;
-  /* 텍스트와 버튼 사이 간격 */
   font-size: 18px;
   padding: 10px 60px;
   cursor: pointer;
   border-radius: 30px;
   border: 2px solid #000;
-  /* 검정 테두리 */
   background-color: transparent;
-  /* 내부 투명 */
+
   color: #000;
-  /* 글자 검정 */
   transition: background-color 0.3s, color 0.3s;
   position: relative;
   top: -220px;
@@ -1052,43 +1005,39 @@ header:hover .submenu {
 
 .founder button:hover {
   background-color: #000;
-  /* 호버 시 배경 검정 */
   color: #fff;
-  /* 글자 흰색 */
+
 }
 
 
 
-/* ===================== 윤리경영 ===================== */
-/* ===================== 공통 섹션 스타일 ===================== */
-/* 공통 스타일 */
+
+
 .ethics,
 .accuse,
 .contact {
   height: 80px;
-  /* 높이를 작게 통일 */
   padding: 10px;
-  /* 위아래 여백 줄임 */
   max-width: 1440px;
   margin: 0 auto 20px;
-  /* 섹션 간 간격 */
+
   box-sizing: border-box;
   text-align: center;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* 텍스트 세로 가운데 */
+
   position: relative;
 
 }
 
-/* 윤리경영: 상단 + 하단 라인 */
+
 .ethics {
   position: relative;
-  /* ::before 위치 기준 */
+
   border-bottom: 2px solid #8685858e;
-  /* 하단 라인만 유지 */
+
   position: relative;
 }
 
@@ -1096,12 +1045,12 @@ header:hover .submenu {
   content: '';
   position: absolute;
   top: -18px;
-  /* 여기 값으로 라인을 위로 올림 */
+
   left: 0;
   width: 100%;
   height: 2px;
   background-color: #0000008c;
-  /* 상단 라인 색상 */
+
 }
 
 .ethics h2 {
@@ -1157,18 +1106,18 @@ header:hover .submenu {
 }
 
 
-/* 제보센터: 하단 라인 */
+
 .accuse {
   border-bottom: 2px solid #8685858e;
 }
 
-/* 문의하기: 하단 라인 */
+
 .contact {
   border-bottom: 2px solid #8685858e;
   margin-bottom: 100px;
 }
 
-/* 텍스트 스타일 */
+
 .container h2 {
   font-size: 26px;
   font-weight: bold;
@@ -1184,10 +1133,10 @@ header:hover .submenu {
 }
 
 
-/* ===================== Footer ===================== */
+
 .footer {
   background-color: #ffffff;
-  /* 푸터 배경 검정 */
+
   color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
@@ -1200,7 +1149,7 @@ header:hover .submenu {
   box-sizing: border-box;
 }
 
-/* 상단 로고 + 링크 */
+
 .footer-top {
   display: flex;
   align-items: center;
@@ -1212,16 +1161,15 @@ header:hover .submenu {
 
 .footer-logo img {
   height: 40px;
-  /* 로고 높이 */
+
   position: relative;
   left: 60px;
 }
 
-/* 링크 스타일 */
+
 .footer-links {
   display: flex;
   gap: 30px;
-  /* 링크 간격 */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1244,13 +1192,12 @@ header:hover .submenu {
   text-decoration: underline;
 }
 
-/* 하단 회사 정보 */
+
 .footer-info {
   font-size: 12px;
   line-height: 1.5;
   color: #ccc;
   text-align: left;
-  /* 왼쪽 정렬 */
   position: relative;
   left: 60px;
 }
@@ -1266,9 +1213,7 @@ header:hover .submenu {
 
 .footer-info p:last-child {
   margin-top: 20px;
-  /* 위쪽 여백 늘리기 */
   margin-bottom: 0;
-  /* 아래쪽 여백 제거 */
   font-size: 14px;
 }
 
@@ -1287,18 +1232,18 @@ header:hover .submenu {
 
 }
 
-/* 아래 방향 속 빈 삼각형 */
+
 .family-btn::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 15px; /* 버튼 오른쪽 위치 */
+  right: 15px; 
   transform: translateY(-50%);
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #000; /* 검정 테두리, 속 빈 삼각형처럼 보임 */
+  border-top: 6px solid #000; 
   
 
 
